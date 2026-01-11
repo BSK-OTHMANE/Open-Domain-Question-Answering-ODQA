@@ -1,6 +1,6 @@
 # Open Domain Question Answering (ODQA)
 
-## 📌 Project Overview
+## Project Overview
 
 This project presents a **Retrieval-Augmented Question Answering (QA) system** built around a fine-tuned **BERT-based reader**. The core idea is to answer natural language questions by combining **information retrieval** with **extractive question answering**, enabling the system to scale beyond a single document while maintaining accurate answer extraction.
 
@@ -8,7 +8,7 @@ The project focuses on **designing, training, and evaluating** each component of
 
 ---
 
-## 🧠 System Architecture
+## System Architecture
 
 The project implements a **two-stage Open-Domain Question Answering (ODQA) architecture** based on the **Retriever–Reader paradigm**. The system is designed to efficiently search a large corpus of documents and extract precise answers using deep semantic representations.
 
@@ -20,7 +20,7 @@ At a high level, the architecture is composed of:
 
 ---
 
-## 🧩 Global Architecture Overview
+## Global Architecture Overview
 
 ```
 User Question
@@ -48,7 +48,7 @@ This modular design clearly separates **retrieval**, **semantic matching**, and 
 
 ---
 
-## 1️⃣ Dense Passage Retrieval (DPR)
+## Dense Passage Retrieval (DPR)
 
 The retrieval module uses **Dense Passage Retrieval (DPR)** to perform semantic search over a large corpus.
 
@@ -67,7 +67,7 @@ This allows semantic similarity to be computed directly between questions and pa
 
 ---
 
-## 2️⃣ Cosine Similarity for Semantic Matching
+## Cosine Similarity for Semantic Matching
 
 To measure relevance between a question and a passage, the system uses **cosine similarity**.
 
@@ -97,7 +97,7 @@ This allows cosine similarity to be computed efficiently using a **dot product**
 
 ---
 
-## 3️⃣ FAISS Vector Indexing and Search
+## FAISS Vector Indexing and Search
 
 To enable fast similarity search at scale, the system relies on **FAISS (Facebook AI Similarity Search)**.
 
@@ -123,7 +123,7 @@ This design ensures **accurate and efficient semantic retrieval**, even with lar
 
 ---
 
-## 4️⃣ Reader Module: BERT for Extractive QA
+## Reader Module: BERT for Extractive QA
 
 The reader module performs **fine-grained comprehension** of retrieved passages.
 
@@ -145,7 +145,7 @@ Multiple candidate answers are generated—one per retrieved passage.
 
 ---
 
-## 5️⃣ Parameter-Efficient Fine-Tuning with LoRA
+## Parameter-Efficient Fine-Tuning with LoRA
 
 To fine-tune the reader efficiently, the project uses **LoRA (Low-Rank Adaptation)**.
 
@@ -166,7 +166,7 @@ This makes the approach well-suited for academic and resource-constrained enviro
 
 ---
 
-## 6️⃣ End-to-End Inference Flow
+## End-to-End Inference Flow
 
 The complete inference pipeline follows these steps:
 
@@ -178,7 +178,7 @@ The complete inference pipeline follows these steps:
 
 ---
 
-## 🔍 What We Built
+## What We Built
 
 * A **dense semantic retriever** using DPR
 * A **cosine-similarity-based search engine** with FAISS
